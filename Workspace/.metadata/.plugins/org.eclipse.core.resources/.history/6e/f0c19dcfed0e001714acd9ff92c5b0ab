@@ -1,0 +1,26 @@
+package pageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class LandingPage extends AbstractPage {
+	
+	public LandingPage(WebDriver driver){
+		super(driver);
+	}
+
+	public ProductListPage searchProducts(){
+		
+		driver.findElement(By.id("oneBoxSearch")).sendKeys("Dishwasher");
+		driver.findElement(By.xpath("/html/body/header/div/div[1]/div[2]/div/div/div[2]/div/form/div/span/button")).click();
+		return new ProductListPage(driver);
+	}
+	
+	public boolean isAtPage(){
+		
+		return driver.getTitle().contains("Buy Electklkrical");
+		
+	}
+	
+	
+}

@@ -1,0 +1,46 @@
+package pageObjects;
+import java.util.List;
+
+import org.openqa.selenium.By;
+//import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class ProductListPage extends AbstractPage  {
+	
+	public ProductListPage(WebDriver driver){
+		super(driver);
+		
+	}
+	
+	public ProductDescPage selectProduct(){
+		
+		driver.findElement(By.id("listViewToggleTop")).click();
+		
+		//driver.findElement(By.xpath("//img[contains(@src,'/globalassets/all-assets/hotpoint/hot-bdw-ltf11s112o-x.png?width=200')]")).click();
+
+		//driver.findElement(By.xpath("/html/body/div[3]/div/main/div[3]/div/div/div[4]/article[8]/div/div[2]/h2/a/span")).click();
+		//By.xpath("//img[contains(@title,'Collector')]")
+		//Hotpoint LTB4B019UK Fully Integrated 13 Place Full Size Dishwasher
+		//<a class="text-accessible" href="/dishwashers/integrated/hotpoint-ltb4b019uk-fully-integrated-13-place-full-size-dishwasher-hot-bdw-ltb4b019-x/" title="Hotpoint LTB4B019UK Fully Integrated 13 Place Full Size Dishwasher" itemprop="url" ng-click="ReportAnalyticsProductClick('HOT-BDW-LTB4B019-X','Hotpoint LTB4B019UK Fully Integrated 13 Place Full Size Dishwasher','Variant/Integrated Dishwashers','Hotpoint',259.000000000)">
+		//<span itemprop="name">Hotpoint LTB4B019UK Fully Integrated 13 Place Full Size Dishwasher</span>
+		//</a>
+		
+		//"a[@title='Hotpoint LTB4B019UK Fully Integrated 13 Place Full Size Dishwasher']/span[@itemprop='name']"
+			
+		//driver.findElement(By.xpath("/html/body/div[4]/div/main/div[3]/div/div/div[4]/article[4]/div/div[6]/div/div[1]/a[2]")).click();
+		
+		//driver.findElement(By.cssSelector("a[title='Zanussi ZDM17301SA Compact 6 Place Dishwasher in Silver']")).click();
+		
+		List<WebElement> li = driver.findElements(By.cssSelector("a[title='Zanussi ZDM17301SA Compact 6 Place Dishwasher in Silver']"));
+		((WebElement) li).click();
+		
+		return new ProductDescPage(driver) ;
+	}
+				
+	public boolean isAtPage(){
+		return driver.getTitle().contains("Search");
+	}
+	
+
+}

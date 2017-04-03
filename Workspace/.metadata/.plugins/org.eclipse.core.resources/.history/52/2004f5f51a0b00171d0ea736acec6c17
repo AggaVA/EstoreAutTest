@@ -1,0 +1,38 @@
+package test;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+import pageObjects.ProductListPage;
+
+
+
+public class LangingPageTest extends AbstractWebDriverTest {
+	
+	//WebDriver driver;
+	
+	@Before
+	public void testSetUp(){
+
+		onLandingPage.navigateToEtore();
+		
+	
+	}
+
+
+	@Test
+	public void testLandingPageLoaded(){
+		
+		Assert.assertTrue("Not On Landing Page", onLandingPage.isAtPage());
+		
+	
+	}
+	
+	@Test
+	public void testSearchOnLandingPage() {
+		
+		ProductListPage onProductListPage  = onLandingPage.searchProducts();
+		Assert.assertTrue("Not On Product List Page", onProductListPage.isAtPage());
+	
+	}
+}

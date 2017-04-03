@@ -1,0 +1,22 @@
+package pageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class ProductDescPage extends AbstractPage {
+	
+	public ProductDescPage(WebDriver driver){
+		super(driver);
+	}
+	
+	public boolean isAtPage(){
+		return driver.getTitle().contains("Buy ");
+	}
+	
+	public boolean isNamePresent(){
+		
+		return driver.findElement(By.cssSelector("h1[itemprop='name']")).isDisplayed();
+		 
+	}
+
+}

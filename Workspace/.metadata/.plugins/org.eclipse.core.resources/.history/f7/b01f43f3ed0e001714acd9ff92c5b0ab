@@ -1,0 +1,27 @@
+package pageObjects;
+import org.openqa.selenium.By;
+//import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.WebDriver;
+
+public class ProductListPage extends AbstractPage  {
+	
+	public ProductListPage(WebDriver driver){
+		super(driver);
+		
+	}
+	
+	public ProductDescPage selectProduct(){
+		
+		driver.findElement(By.xpath("//img[contains(@alt,'Hotpoint LTF11S112OUK Fully Integrated 15 Place Full Size Dishwasher')]")).click();
+		return new ProductDescPage(driver) ;
+		
+		//By.xpath("//img[contains(@title,'Collector')]")
+				
+	}
+				
+	public boolean isAtPage(){
+		return driver.getTitle().contains("Search");
+	}
+	
+
+}

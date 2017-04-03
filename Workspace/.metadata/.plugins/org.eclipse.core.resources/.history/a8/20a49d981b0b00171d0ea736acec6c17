@@ -1,0 +1,63 @@
+package test;
+
+//import java.util.List;
+import java.io.File;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
+import org.junit.After;
+import org.junit.Before;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import pageObjects.LandingPage;
+//import testdata.ExcelFileHandler;
+
+public class AbstractWebDriverTest {
+	
+	protected WebDriver driver;
+	protected LandingPage onLandingPage;
+	//protected ExcelFileHandler ExcelData;
+	
+	@Before
+	public void setUp(){
+		
+		System.setProperty("webdriver.chrome.driver", "C://EstoreAutomation//Webdriver//chromedriver.exe");
+		driver = new ChromeDriver();	
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		onLandingPage = new LandingPage(driver);
+		//List<List<String>> data = ExcelData.readFromFile(filename);
+			
+	}
+	
+	@After
+	public void testCleanUp(){
+		
+		driver.close();	
+	}
+	
+	public static String captureScreenshot (WebDriver driver, String screenshotName){
+		
+	try {
+		TakesScreenshot ts = (TakesScreenshot)driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		String dest = "C:\\EstoreAutomation\\Screenshots\\" + screenshotName + ".png";
+		File destination = new File(dest);
+		
+		FileUtils.copyFile(source, destination);
+			
+		return dest;
+		} 
+	
+	catch (IOException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+		return e.getMessage();
+		}
+		
+	}
+
+}

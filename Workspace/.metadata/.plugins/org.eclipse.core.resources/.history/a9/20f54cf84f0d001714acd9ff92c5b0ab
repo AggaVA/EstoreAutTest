@@ -1,0 +1,63 @@
+package test;
+//import org.junit.After;
+import org.junit.Assert;
+//import org.junit.Before;
+//import org.junit.Test;
+//import org.testng.annotations.AfterTest;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
+import pageObjects.ProductListPage;
+
+
+
+public class LangingPageTest extends AbstractWebDriverTest {
+	
+	//WebDriver driver;
+	ExtentReports report = new ExtentReports("C:\\EstoreAutomation\\TestReports\\LatestReport.html");
+	ExtentTest logger;
+	
+	@BeforeTest
+	public void testSetUp(){
+		onLandingPage.navigateToEtore();
+	}
+
+
+	@Test
+	public void testLandingPageLoaded(){
+		
+		logger = report.startTest("verifyLandingPageLoad");		
+		Assert.assertTrue("Not On Landing Page", onLandingPage.isAtPage());		
+		logger.log(LogStatus.PASS, "Landing Page Loaded Correctly");
+		
+	
+	}
+	
+	@Test
+	public void testSearchOnLandingPage() {
+		
+		logger = report.startTest("verifySearch");
+		ProductListPage onProductListPage  = onLandingPage.searchProducts();
+		logger.log(LogStatus.INFO, "Search on Landing Page Completed");
+		Assert.assertTrue("Not On Product List Page", onProductListPage.isAtPage());
+		logger.log(LogStatus.PASS, "Product List Page loaded correctly");
+		
+	}
+	
+	@AfterTest
+	public void testCleanup(){
+		
+			//logger.log(LogStatus.FAIL, "Verify Product Page", "Product Page not loaded correctly");
+		    report.endTest(logger);
+		    report.flush();
+		
+	}
+	
+	
+}

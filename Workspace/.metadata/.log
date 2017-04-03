@@ -1,0 +1,1339 @@
+!SESSION 2017-03-14 14:57:43.721 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-14 15:02:39.090
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-14 15:02:39.091
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\varun.aggarwal'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.mpc.ui 4 0 2017-03-20 09:19:43.378
+!MESSAGE Query failed to complete
+!SUBENTRY 1 org.eclipse.equinox.p2.discovery 4 0 2017-03-20 09:19:43.378
+!MESSAGE MarketplaceDiscoveryStrategy failed with an error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot complete request to http://marketplace.eclipse.org/news/api/p?product=org.eclipse.epp.package.java.product&platform.version=4.4.0.v20140606-1215&os=win32&java.version=1.8.0_121&client=org.eclipse.epp.mpc.core&product.version=4.4.0.20140612-0500&runtime.version=3.10.0.v20140318-2214&ws=win32&nl=en_GB: Marketplace service is temporarily unavailable.  Please try again later.
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:148)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:93)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:80)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:419)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:197)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:570)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:406)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$6.run(MarketplaceWizard.java:801)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.epp.internal.mpc.core.service.ServiceUnavailableException: Marketplace service is temporarily unavailable.  Please try again later.
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleServiceUnavailable(TransportFactory.java:144)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleStreamExceptions(TransportFactory.java:128)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:109)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	... 9 more
+Caused by: org.eclipse.core.runtime.CoreException: HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/news/api/p?product=org.eclipse.epp.package.java.product&platform.version=4.4.0.v20140606-1215&os=win32&java.version=1.8.0_121&client=org.eclipse.epp.mpc.core&product.version=4.4.0.20140612-0500&runtime.version=3.10.0.v20140318-2214&ws=win32&nl=en_GB
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:107)
+	... 10 more
+Caused by: org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:662)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:389)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:240)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	... 16 more
+!SUBENTRY 2 org.eclipse.epp.mpc.core 4 0 2017-03-20 09:19:43.383
+!MESSAGE Cannot complete request to http://marketplace.eclipse.org/news/api/p?product=org.eclipse.epp.package.java.product&platform.version=4.4.0.v20140606-1215&os=win32&java.version=1.8.0_121&client=org.eclipse.epp.mpc.core&product.version=4.4.0.20140612-0500&runtime.version=3.10.0.v20140318-2214&ws=win32&nl=en_GB: Marketplace service is temporarily unavailable.  Please try again later.
+!STACK 1
+org.eclipse.epp.internal.mpc.core.service.ServiceUnavailableException: Marketplace service is temporarily unavailable.  Please try again later.
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleServiceUnavailable(TransportFactory.java:144)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleStreamExceptions(TransportFactory.java:128)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:109)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:93)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:80)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:419)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:197)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:570)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:406)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$6.run(MarketplaceWizard.java:801)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.core.runtime.CoreException: HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/news/api/p?product=org.eclipse.epp.package.java.product&platform.version=4.4.0.v20140606-1215&os=win32&java.version=1.8.0_121&client=org.eclipse.epp.mpc.core&product.version=4.4.0.20140612-0500&runtime.version=3.10.0.v20140318-2214&ws=win32&nl=en_GB
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:107)
+	... 10 more
+Caused by: org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:662)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:389)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:240)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	... 16 more
+!SUBENTRY 3 org.eclipse.epp.mpc.core 4 503 2017-03-20 09:19:43.385
+!MESSAGE Marketplace service is temporarily unavailable.  Please try again later.
+!STACK 1
+org.eclipse.core.runtime.CoreException: HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/news/api/p?product=org.eclipse.epp.package.java.product&platform.version=4.4.0.v20140606-1215&os=win32&java.version=1.8.0_121&client=org.eclipse.epp.mpc.core&product.version=4.4.0.20140612-0500&runtime.version=3.10.0.v20140318-2214&ws=win32&nl=en_GB
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:107)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:93)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:80)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:419)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:197)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:570)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:406)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$6.run(MarketplaceWizard.java:801)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:662)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:389)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:240)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	... 16 more
+!SUBENTRY 4 org.eclipse.equinox.p2.transport.ecf 4 1002 2017-03-20 09:19:43.385
+!MESSAGE HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/news/api/p?product=org.eclipse.epp.package.java.product&platform.version=4.4.0.v20140606-1215&os=win32&java.version=1.8.0_121&client=org.eclipse.epp.mpc.core&product.version=4.4.0.20140612-0500&runtime.version=3.10.0.v20140318-2214&ws=win32&nl=en_GB
+!STACK 1
+org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:662)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:389)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:240)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:107)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:93)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:80)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:419)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:197)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:570)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:406)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$6.run(MarketplaceWizard.java:801)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SUBENTRY 5 org.eclipse.ecf.identity 4 0 2017-03-20 09:19:43.385
+!MESSAGE HttpComponents connection error response code 503.
+
+!ENTRY org.eclipse.epp.mpc.ui 4 0 2017-03-20 09:20:34.860
+!MESSAGE Marketplace service is temporarily unavailable.  Please try again later.
+!STACK 1
+org.eclipse.epp.internal.mpc.core.service.ServiceUnavailableException: Marketplace service is temporarily unavailable.  Please try again later.
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleServiceUnavailable(TransportFactory.java:144)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleStreamExceptions(TransportFactory.java:128)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:109)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:93)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:80)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:272)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService$2.doSearch(CachingMarketplaceService.java:112)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.performSearch(CachingMarketplaceService.java:127)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.search(CachingMarketplaceService.java:109)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performQuery(MarketplaceDiscoveryStrategy.java:335)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$1.run(MarketplaceCatalog.java:74)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:364)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performQuery(MarketplaceCatalog.java:72)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer$4.run(MarketplaceViewer.java:404)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.core.runtime.CoreException: HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/api/p/search/apachesolr_search/testng?product=org.eclipse.epp.package.java.product&platform.version=4.4.0.v20140606-1215&os=win32&java.version=1.8.0_121&client=org.eclipse.epp.mpc.core&product.version=4.4.0.20140612-0500&runtime.version=3.10.0.v20140318-2214&ws=win32&nl=en_GB
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:180)
+	at sun.reflect.GeneratedMethodAccessor51.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:107)
+	... 14 more
+Caused by: org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:662)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:389)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:240)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	... 19 more
+!SUBENTRY 1 org.eclipse.epp.mpc.core 4 503 2017-03-20 09:20:34.861
+!MESSAGE Marketplace service is temporarily unavailable.  Please try again later.
+!STACK 1
+org.eclipse.core.runtime.CoreException: HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/api/p/search/apachesolr_search/testng?product=org.eclipse.epp.package.java.product&platform.version=4.4.0.v20140606-1215&os=win32&java.version=1.8.0_121&client=org.eclipse.epp.mpc.core&product.version=4.4.0.20140612-0500&runtime.version=3.10.0.v20140318-2214&ws=win32&nl=en_GB
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:180)
+	at sun.reflect.GeneratedMethodAccessor51.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:107)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:93)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:80)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:272)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService$2.doSearch(CachingMarketplaceService.java:112)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.performSearch(CachingMarketplaceService.java:127)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.search(CachingMarketplaceService.java:109)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performQuery(MarketplaceDiscoveryStrategy.java:335)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$1.run(MarketplaceCatalog.java:74)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:364)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performQuery(MarketplaceCatalog.java:72)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer$4.run(MarketplaceViewer.java:404)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:662)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:389)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:240)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	... 19 more
+!SUBENTRY 2 org.eclipse.equinox.p2.transport.ecf 4 1002 2017-03-20 09:20:34.861
+!MESSAGE HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/api/p/search/apachesolr_search/testng?product=org.eclipse.epp.package.java.product&platform.version=4.4.0.v20140606-1215&os=win32&java.version=1.8.0_121&client=org.eclipse.epp.mpc.core&product.version=4.4.0.20140612-0500&runtime.version=3.10.0.v20140318-2214&ws=win32&nl=en_GB
+!STACK 1
+org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:662)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:389)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:240)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	at sun.reflect.GeneratedMethodAccessor51.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:107)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:93)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:80)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:272)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.search(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService$2.doSearch(CachingMarketplaceService.java:112)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.performSearch(CachingMarketplaceService.java:127)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.search(CachingMarketplaceService.java:109)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performQuery(MarketplaceDiscoveryStrategy.java:335)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog$1.run(MarketplaceCatalog.java:74)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performDiscovery(MarketplaceCatalog.java:364)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performQuery(MarketplaceCatalog.java:72)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer$4.run(MarketplaceViewer.java:404)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SUBENTRY 3 org.eclipse.ecf.identity 4 0 2017-03-20 09:20:34.861
+!MESSAGE HttpComponents connection error response code 503.
+
+!ENTRY org.eclipse.epp.mpc.ui 4 0 2017-03-20 09:21:01.473
+!MESSAGE Query failed to complete
+!SUBENTRY 1 org.eclipse.equinox.p2.discovery 4 0 2017-03-20 09:21:01.473
+!MESSAGE MarketplaceDiscoveryStrategy failed with an error
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot complete request to http://marketplace.eclipse.org/news/api/p?product=org.eclipse.epp.package.java.product&platform.version=4.4.0.v20140606-1215&os=win32&java.version=1.8.0_121&client=org.eclipse.epp.mpc.core&product.version=4.4.0.20140612-0500&runtime.version=3.10.0.v20140318-2214&ws=win32&nl=en_GB: Marketplace service is temporarily unavailable.  Please try again later.
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:148)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:93)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:80)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:419)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:197)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:570)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:406)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$6.run(MarketplaceWizard.java:801)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.epp.internal.mpc.core.service.ServiceUnavailableException: Marketplace service is temporarily unavailable.  Please try again later.
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleServiceUnavailable(TransportFactory.java:144)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleStreamExceptions(TransportFactory.java:128)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:109)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	... 9 more
+Caused by: org.eclipse.core.runtime.CoreException: HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/news/api/p?product=org.eclipse.epp.package.java.product&platform.version=4.4.0.v20140606-1215&os=win32&java.version=1.8.0_121&client=org.eclipse.epp.mpc.core&product.version=4.4.0.20140612-0500&runtime.version=3.10.0.v20140318-2214&ws=win32&nl=en_GB
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:180)
+	at sun.reflect.GeneratedMethodAccessor51.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:107)
+	... 10 more
+Caused by: org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:662)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:389)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:240)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	... 15 more
+!SUBENTRY 2 org.eclipse.epp.mpc.core 4 0 2017-03-20 09:21:01.474
+!MESSAGE Cannot complete request to http://marketplace.eclipse.org/news/api/p?product=org.eclipse.epp.package.java.product&platform.version=4.4.0.v20140606-1215&os=win32&java.version=1.8.0_121&client=org.eclipse.epp.mpc.core&product.version=4.4.0.20140612-0500&runtime.version=3.10.0.v20140318-2214&ws=win32&nl=en_GB: Marketplace service is temporarily unavailable.  Please try again later.
+!STACK 1
+org.eclipse.epp.internal.mpc.core.service.ServiceUnavailableException: Marketplace service is temporarily unavailable.  Please try again later.
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleServiceUnavailable(TransportFactory.java:144)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory.handleStreamExceptions(TransportFactory.java:128)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:109)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:93)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:80)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:419)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:197)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:570)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:406)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$6.run(MarketplaceWizard.java:801)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.core.runtime.CoreException: HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/news/api/p?product=org.eclipse.epp.package.java.product&platform.version=4.4.0.v20140606-1215&os=win32&java.version=1.8.0_121&client=org.eclipse.epp.mpc.core&product.version=4.4.0.20140612-0500&runtime.version=3.10.0.v20140318-2214&ws=win32&nl=en_GB
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:180)
+	at sun.reflect.GeneratedMethodAccessor51.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:107)
+	... 10 more
+Caused by: org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:662)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:389)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:240)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	... 15 more
+!SUBENTRY 3 org.eclipse.epp.mpc.core 4 503 2017-03-20 09:21:01.474
+!MESSAGE Marketplace service is temporarily unavailable.  Please try again later.
+!STACK 1
+org.eclipse.core.runtime.CoreException: HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/news/api/p?product=org.eclipse.epp.package.java.product&platform.version=4.4.0.v20140606-1215&os=win32&java.version=1.8.0_121&client=org.eclipse.epp.mpc.core&product.version=4.4.0.20140612-0500&runtime.version=3.10.0.v20140318-2214&ws=win32&nl=en_GB
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:180)
+	at sun.reflect.GeneratedMethodAccessor51.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:107)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:93)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:80)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:419)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:197)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:570)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:406)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$6.run(MarketplaceWizard.java:801)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:662)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:389)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:240)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	... 15 more
+!SUBENTRY 4 org.eclipse.equinox.p2.transport.ecf 4 1002 2017-03-20 09:21:01.475
+!MESSAGE HTTP Server 'Service Unavailable': http://marketplace.eclipse.org/news/api/p?product=org.eclipse.epp.package.java.product&platform.version=4.4.0.v20140606-1215&os=win32&java.version=1.8.0_121&client=org.eclipse.epp.mpc.core&product.version=4.4.0.20140612-0500&runtime.version=3.10.0.v20140318-2214&ws=win32&nl=en_GB
+!STACK 1
+org.eclipse.ecf.filetransfer.IncomingFileTransferException: HttpComponents connection error response code 503.
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.openStreams(HttpClientRetrieveFileTransfer.java:662)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:389)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.read(FileReader.java:240)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.stream(RepositoryTransport.java:172)
+	at sun.reflect.GeneratedMethodAccessor51.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.epp.internal.mpc.core.util.AbstractP2TransportFactory.invokeStream(AbstractP2TransportFactory.java:35)
+	at org.eclipse.epp.internal.mpc.core.util.TransportFactory$1.stream(TransportFactory.java:107)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:128)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:93)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:80)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:419)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultMarketplaceService.news(DefaultMarketplaceService.java:1)
+	at org.eclipse.epp.internal.mpc.core.service.CachingMarketplaceService.news(CachingMarketplaceService.java:197)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceDiscoveryStrategy.performNewsDiscovery(MarketplaceDiscoveryStrategy.java:570)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.performNewsDiscovery(MarketplaceCatalog.java:406)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizard$6.run(MarketplaceWizard.java:801)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SUBENTRY 5 org.eclipse.ecf.identity 4 0 2017-03-20 09:21:01.475
+!MESSAGE HttpComponents connection error response code 503.
+
+!ENTRY org.eclipse.epp.mpc.ui 1 0 2017-03-20 09:22:30.534
+!MESSAGE Performing Marketplace install request from http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1549
+!SESSION 2017-03-20 09:25:23.194 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-20 09:25:42.785
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-20 09:25:42.786
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\varun.aggarwal'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.testng.eclipse 1 0 2017-03-20 09:25:52.710
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 50846 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--334338381\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 50846 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--334338381\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-20 09:26:12.623
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 50848 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1722190462\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 50848 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1722190462\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 4 4 2017-03-20 09:27:38.915
+!MESSAGE Error
+!STACK 1
+Java Model Exception: Java Model Status [@Test [in testSetUp() [in LangingPageTest [in [Working copy] LangingPageTest.java [in test [in src [in EstoreTest]]]]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:534)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:568)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:280)
+	at org.eclipse.jdt.internal.core.Annotation.getMemberValuePairs(Annotation.java:75)
+	at org.testng.eclipse.util.LaunchUtil.methodHasDependencies(LaunchUtil.java:250)
+	at org.testng.eclipse.util.LaunchUtil.launchMethodConfiguration(LaunchUtil.java:280)
+	at org.testng.eclipse.util.LaunchUtil.launchMethodConfiguration(LaunchUtil.java:268)
+	at org.testng.eclipse.util.LaunchUtil.launchMethodConfiguration(LaunchUtil.java:244)
+	at org.testng.eclipse.launch.TestNGLaunchShortcut.run(TestNGLaunchShortcut.java:206)
+	at org.testng.eclipse.launch.TestNGLaunchShortcut.launch(TestNGLaunchShortcut.java:135)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.launch(LaunchShortcutExtension.java:420)
+	at org.eclipse.debug.internal.ui.actions.LaunchShortcutAction.run(LaunchShortcutAction.java:71)
+	at org.eclipse.debug.internal.ui.actions.LaunchShortcutAction.runWithEvent(LaunchShortcutAction.java:123)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:782)
+	at org.eclipse.jface.action.ActionContributionItem$9.handleEvent(ActionContributionItem.java:1293)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:382)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:236)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1438)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2017-03-20 09:27:38.916
+!MESSAGE @Test [in testSetUp() [in LangingPageTest [in [Working copy] LangingPageTest.java [in test [in src [in EstoreTest]]]]]] does not exist
+
+!ENTRY org.testng.eclipse 1 0 2017-03-20 09:27:41.148
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 50854 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1858143240\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 50854 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1858143240\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-20 09:28:21.986
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 50896 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--503381066\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 50896 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--503381066\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-20 09:29:10.027
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 50957 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1522550111\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 50957 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1522550111\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-20 09:30:14.846
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51013 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1885645804\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 51013 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1885645804\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-20 09:31:20.558
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51081 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-522403830\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 51081 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-522403830\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-20 09:32:26.307
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51134 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-82543892\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 51134 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-82543892\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-20 10:52:03.777
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52858 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1326424670\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 52858 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1326424670\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-20 10:52:40.430
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52919 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-397296375\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 52919 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-397296375\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-20 11:00:15.607
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52994 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-764054022\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 52994 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-764054022\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-20 12:08:37.209
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 53876 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1101572090\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 53876 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1101572090\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 08:56:40.248
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 61824 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1995739349\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 61824 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1995739349\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 08:57:44.115
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:[Working copy] LangingPageTest.java [in test [in src [in EstoreTest]]]
+  package test
+  import org.junit.Assert
+  import org.testng.ITestResult
+  import org.testng.annotations.AfterMethod
+  import org.testng.annotations.AfterTest
+  import org.testng.annotations.BeforeTest
+  import org.testng.annotations.Test
+  import com.relevantcodes.extentreports.ExtentReports
+  import com.relevantcodes.extentreports.ExtentTest
+  import com.relevantcodes.extentreports.LogStatus
+  import pageObjects.ProductListPage
+  import testdata.GetScreenshot
+  class LangingPageTest
+    void testSetUp()
+    void testLandingPageLoaded()
+    void testSearchOnLandingPage()
+    void getResult(ITestResult)
+    void testCleanup()
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 08:57:44.176
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 61898 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1214479591\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 61898 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1214479591\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 10:38:55.791
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 62674 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1995592593\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 62674 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1995592593\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 10:52:27.486
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 62996 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--378171324\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 62996 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--378171324\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 10:54:40.980
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 63080 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1345735255\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 63080 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1345735255\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 11:09:25.633
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 63256 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1823060332\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 63256 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1823060332\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 11:17:37.609
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 63380 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1683083063\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 63380 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1683083063\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 11:40:11.506
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 63961 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1967945914\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 63961 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1967945914\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 11:42:23.873
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 64051 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1824635433\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 64051 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1824635433\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 11:44:25.936
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 64121 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-130722299\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 64121 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-130722299\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 11:48:28.678
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 64192 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--720205995\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 64192 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--720205995\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 12:01:19.161
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:[Working copy] LangingPageTest.java [in test [in src [in EstoreTest]]]
+  package test
+  import org.junit.Assert
+  import org.testng.ITestResult
+  import org.testng.annotations.AfterMethod
+  import org.testng.annotations.AfterTest
+  import org.testng.annotations.BeforeTest
+  import org.testng.annotations.Test
+  import com.relevantcodes.extentreports.ExtentReports
+  import com.relevantcodes.extentreports.ExtentTest
+  import com.relevantcodes.extentreports.LogStatus
+  import pageObjects.ProductDescPage
+  import pageObjects.ProductListPage
+  import testdata.GetScreenshot
+  class LangingPageTest
+    void testSetUp()
+    void testLandingPageLoaded()
+    void testSearchOnLandingPage()
+    void testProductPage()
+    void getResult(ITestResult)
+    void testCleanup()
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 12:01:19.219
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 64280 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--339983257\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 64280 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--339983257\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 12:09:22.950
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 64396 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-756673701\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 64396 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-756673701\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 12:10:28.454
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 64469 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-259821665\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 64469 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-259821665\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 12:16:22.062
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 64550 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1246535388\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 64550 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1246535388\testng-customsuite.xml
+!SESSION 2017-03-22 14:11:36.699 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-03-22 14:11:45.474
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-22 14:11:49.912
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-22 14:11:49.912
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\varun.aggarwal'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 14:12:17.389
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:LangingPageTest.java [in test [in src [in EstoreTest]]]
+  package test
+  import org.junit.Assert
+  import org.testng.ITestResult
+  import org.testng.annotations.AfterMethod
+  import org.testng.annotations.AfterTest
+  import org.testng.annotations.BeforeTest
+  import org.testng.annotations.Test
+  import com.relevantcodes.extentreports.ExtentReports
+  import com.relevantcodes.extentreports.ExtentTest
+  import com.relevantcodes.extentreports.LogStatus
+  import pageObjects.ProductDescPage
+  import pageObjects.ProductListPage
+  import testdata.GetScreenshot
+  class LangingPageTest
+    void testSetUp()
+    void testLandingPageLoaded()
+    void testSearchOnLandingPage()
+    void testProductPage()
+    void getResult(ITestResult)
+    void testCleanup()
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 14:12:18.042
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 50520 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1342932063\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 50520 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1342932063\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 14:31:11.304
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51013 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1560026271\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 51013 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1560026271\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 14:48:26.109
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51402 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1854457703\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 51402 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1854457703\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 14:51:02.500
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51508 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1353746142\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 51508 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1353746142\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 14:54:34.573
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51590 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-68778929\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 51590 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-68778929\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 14:56:31.826
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51655 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-105634914\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 51655 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-105634914\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 15:20:05.064
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51832 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-255938749\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 51832 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-255938749\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 15:22:48.755
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52011 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1569681102\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 52011 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1569681102\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 15:28:04.106
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52147 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1074160622\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 52147 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1074160622\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 15:34:52.913
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52247 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1960772640\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 52247 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1960772640\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 16:33:28.576
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52735 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1905145514\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 52735 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1905145514\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 16:34:15.309
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52811 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--998014876\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 52811 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--998014876\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 16:35:51.956
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:[Working copy] LangingPageTest.java [in test [in src [in EstoreTest]]]
+  package test
+  import org.junit.Assert
+  import org.testng.ITestResult
+  import org.testng.annotations.AfterMethod
+  import org.testng.annotations.AfterTest
+  import org.testng.annotations.BeforeTest
+  import org.testng.annotations.Test
+  import com.relevantcodes.extentreports.ExtentReports
+  import com.relevantcodes.extentreports.ExtentTest
+  import com.relevantcodes.extentreports.LogStatus
+  import pageObjects.ProductDescPage
+  import pageObjects.ProductListPage
+  import testdata.GetScreenshot
+  class LangingPageTest
+    void testSetUp()
+    void testLandingPageLoaded()
+    void testSearchOnLandingPage()
+    void testProductPage()
+    void getResult(ITestResult)
+    void testCleanup()
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 16:35:52.003
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52889 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1984527949\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 52889 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1984527949\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 16:37:15.577
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 52976 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-62585123\testng-customsuite.xml
+java -ea -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 52976 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-62585123\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 16:37:35.365
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:[Working copy] LangingPageTest.java [in test [in src [in EstoreTest]]]
+  package test
+  import org.junit.Assert
+  import org.testng.ITestResult
+  import org.testng.annotations.AfterMethod
+  import org.testng.annotations.AfterTest
+  import org.testng.annotations.BeforeTest
+  import org.testng.annotations.Test
+  import com.relevantcodes.extentreports.ExtentReports
+  import com.relevantcodes.extentreports.ExtentTest
+  import com.relevantcodes.extentreports.LogStatus
+  import pageObjects.ProductDescPage
+  import pageObjects.ProductListPage
+  import testdata.GetScreenshot
+  class LangingPageTest
+    void testSetUp()
+    void testLandingPageLoaded()
+    void testSearchOnLandingPage()
+    void testProductPage()
+    void getResult(ITestResult)
+    void testCleanup()
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 16:37:35.396
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 53023 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1802662220\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 53023 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1802662220\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 16:55:32.620
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:[Working copy] LangingPageTest.java [in test [in src [in EstoreTest]]]
+  package test
+  import org.junit.Assert
+  import org.testng.ITestResult
+  import org.testng.annotations.AfterMethod
+  import org.testng.annotations.AfterTest
+  import org.testng.annotations.BeforeTest
+  import org.testng.annotations.Test
+  import com.relevantcodes.extentreports.ExtentReports
+  import com.relevantcodes.extentreports.ExtentTest
+  import com.relevantcodes.extentreports.LogStatus
+  import pageObjects.ProductDescPage
+  import pageObjects.ProductListPage
+  import testdata.GetScreenshot
+  class LangingPageTest
+    void testSetUp()
+    void testLandingPageLoaded()
+    void testSearchOnLandingPage()
+    void testProductPage()
+    void getResult(ITestResult)
+    void testCleanup()
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 16:55:32.667
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 53257 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-910362094\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 53257 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-910362094\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 16:56:50.408
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:[Working copy] LangingPageTest.java [in test [in src [in EstoreTest]]]
+  package test
+  import org.junit.Assert
+  import org.testng.ITestResult
+  import org.testng.annotations.AfterMethod
+  import org.testng.annotations.AfterTest
+  import org.testng.annotations.BeforeTest
+  import org.testng.annotations.Test
+  import com.relevantcodes.extentreports.ExtentReports
+  import com.relevantcodes.extentreports.ExtentTest
+  import com.relevantcodes.extentreports.LogStatus
+  import pageObjects.ProductDescPage
+  import pageObjects.ProductListPage
+  import testdata.GetScreenshot
+  class LangingPageTest
+    void testSetUp()
+    void testLandingPageLoaded()
+    void testSearchOnLandingPage()
+    void testProductPage()
+    void getResult(ITestResult)
+    void testCleanup()
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 16:56:50.439
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 53336 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1972393296\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 53336 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1972393296\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 17:11:47.919
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 53481 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-678629703\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 53481 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-678629703\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 17:19:50.254
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 53609 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--219869537\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 53609 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--219869537\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 17:22:05.043
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 53709 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-109291632\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 53709 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-109291632\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 17:23:32.583
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 53792 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1909931893\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 53792 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1909931893\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 17:26:34.117
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 53878 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1632098859\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 53878 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1632098859\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 17:30:19.695
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 53985 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-964874139\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 53985 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-964874139\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-22 17:31:21.435
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 54080 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1071308986\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 54080 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1071308986\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-23 08:29:45.826
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:[Working copy] LangingPageTest.java [in test [in src [in EstoreTest]]]
+  package test
+  import org.junit.Assert
+  import org.testng.ITestResult
+  import org.testng.annotations.AfterMethod
+  import org.testng.annotations.AfterTest
+  import org.testng.annotations.BeforeTest
+  import org.testng.annotations.Test
+  import com.relevantcodes.extentreports.ExtentReports
+  import com.relevantcodes.extentreports.ExtentTest
+  import com.relevantcodes.extentreports.LogStatus
+  import pageObjects.ProductDescPage
+  import pageObjects.ProductListPage
+  import testdata.GetScreenshot
+  class LangingPageTest
+    void testSetUp()
+    void testLandingPageLoaded()
+    void testSearchOnLandingPage()
+    void testProductPage()
+    void getResult(ITestResult)
+    void testCleanup()
+
+!ENTRY org.testng.eclipse 1 0 2017-03-23 08:29:49.480
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 54452 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1292914248\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 54452 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--1292914248\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-23 08:43:19.821
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:[Working copy] LangingPageTest.java [in test [in src [in EstoreTest]]]
+  package test
+  import org.junit.Assert
+  import org.testng.ITestResult
+  import org.testng.annotations.AfterMethod
+  import org.testng.annotations.AfterTest
+  import org.testng.annotations.BeforeTest
+  import org.testng.annotations.Test
+  import com.relevantcodes.extentreports.ExtentReports
+  import com.relevantcodes.extentreports.ExtentTest
+  import com.relevantcodes.extentreports.LogStatus
+  import pageObjects.ProductDescPage
+  import pageObjects.ProductListPage
+  import testdata.GetScreenshot
+  class LangingPageTest
+    void testSetUp()
+    void testLandingPageLoaded()
+    void testSearchOnLandingPage()
+    void testProductPage()
+    void getResult(ITestResult)
+    void testCleanup()
+
+!ENTRY org.testng.eclipse 1 0 2017-03-23 08:43:21.781
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 54685 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--659840843\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 54685 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--659840843\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-23 10:02:41.025
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:[Working copy] LangingPageTest.java [in test [in src [in EstoreTest]]]
+  package test
+  import org.junit.Assert
+  import org.testng.ITestResult
+  import org.testng.annotations.AfterMethod
+  import org.testng.annotations.AfterTest
+  import org.testng.annotations.BeforeTest
+  import org.testng.annotations.Test
+  import com.relevantcodes.extentreports.ExtentReports
+  import com.relevantcodes.extentreports.ExtentTest
+  import com.relevantcodes.extentreports.LogStatus
+  import pageObjects.ProductDescPage
+  import pageObjects.ProductListPage
+  import testdata.GetScreenshot
+  class LangingPageTest
+    void testSetUp()
+    void testLandingPageLoaded()
+    void testSearchOnLandingPage()
+    void testProductPage()
+    void getResult(ITestResult)
+    void testCleanup()
+
+!ENTRY org.testng.eclipse 1 0 2017-03-23 10:02:41.072
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 55300 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-852425885\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 55300 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-852425885\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-23 10:05:15.807
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:[Working copy] LangingPageTest.java [in test [in src [in EstoreTest]]]
+  package test
+  import org.junit.Assert
+  import org.testng.ITestResult
+  import org.testng.annotations.AfterMethod
+  import org.testng.annotations.AfterTest
+  import org.testng.annotations.BeforeTest
+  import org.testng.annotations.Test
+  import com.relevantcodes.extentreports.ExtentReports
+  import com.relevantcodes.extentreports.ExtentTest
+  import com.relevantcodes.extentreports.LogStatus
+  import pageObjects.ProductDescPage
+  import pageObjects.ProductListPage
+  import testdata.GetScreenshot
+  class LangingPageTest
+    void testSetUp()
+    void testLandingPageLoaded()
+    void testSearchOnLandingPage()
+    void testProductPage()
+    void getResult(ITestResult)
+    void testCleanup()
+
+!ENTRY org.testng.eclipse 1 0 2017-03-23 10:05:15.856
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 55428 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-18660218\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 55428 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-18660218\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-03-24 07:55:59.056
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:[Working copy] LangingPageTest.java [in test [in src [in EstoreTest]]]
+  package test
+  import org.junit.Assert
+  import org.testng.ITestResult
+  import org.testng.annotations.AfterMethod
+  import org.testng.annotations.AfterTest
+  import org.testng.annotations.BeforeTest
+  import org.testng.annotations.Test
+  import com.relevantcodes.extentreports.ExtentReports
+  import com.relevantcodes.extentreports.ExtentTest
+  import com.relevantcodes.extentreports.LogStatus
+  import pageObjects.ProductDescPage
+  import pageObjects.ProductListPage
+  import testdata.GetScreenshot
+  class LangingPageTest
+    void testSetUp()
+    void testLandingPageLoaded()
+    void testSearchOnLandingPage()
+    void testProductPage()
+    void getResult(ITestResult)
+    void testCleanup()
+
+!ENTRY org.testng.eclipse 1 0 2017-03-24 07:56:01.041
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 59777 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--216659289\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 59777 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--216659289\testng-customsuite.xml
+!SESSION 2017-03-24 09:44:55.933 -----------------------------------------------
+eclipse.buildId=4.4.0.I20140606-1215
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-24 09:45:06.304
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-24 09:45:06.304
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\varun.aggarwal'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.testng.eclipse 1 0 2017-03-24 09:45:26.540
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:LangingPageTest.java [in test [in src [in EstoreTest]]]
+  package test
+  import org.junit.Assert
+  import org.testng.ITestResult
+  import org.testng.annotations.AfterMethod
+  import org.testng.annotations.AfterTest
+  import org.testng.annotations.BeforeTest
+  import org.testng.annotations.Test
+  import com.relevantcodes.extentreports.ExtentReports
+  import com.relevantcodes.extentreports.ExtentTest
+  import com.relevantcodes.extentreports.LogStatus
+  import pageObjects.ProductDescPage
+  import pageObjects.ProductListPage
+  import testdata.GetScreenshot
+  class LangingPageTest
+    void testSetUp()
+    void testLandingPageLoaded()
+    void testSearchOnLandingPage()
+    void testProductPage()
+    void getResult(ITestResult)
+    void testCleanup()
+
+!ENTRY org.testng.eclipse 1 0 2017-03-24 09:45:27.185
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 50000 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--2124867767\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 50000 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse--2124867767\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-04-03 14:23:40.280
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:[Working copy] LangingPageTest.java [in test [in src [in EstoreTest]]]
+  package test
+  import org.junit.Assert
+  import org.testng.ITestResult
+  import org.testng.annotations.AfterMethod
+  import org.testng.annotations.AfterTest
+  import org.testng.annotations.BeforeTest
+  import org.testng.annotations.Test
+  import com.relevantcodes.extentreports.ExtentReports
+  import com.relevantcodes.extentreports.ExtentTest
+  import com.relevantcodes.extentreports.LogStatus
+  import pageObjects.BasketPage
+  import pageObjects.ProductDescPage
+  import pageObjects.ProductListPage
+  import testdata.GetScreenshot
+  class LangingPageTest
+    void testSetUp()
+    void testLandingPageLoaded()
+    void testSearchOnLandingPage()
+    void testProductPage()
+    void getResult(ITestResult)
+    void testCleanup()
+
+!ENTRY org.testng.eclipse 1 0 2017-04-03 14:23:40.581
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 57648 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1399988739\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 57648 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-1399988739\testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-04-03 14:26:36.793
+!MESSAGE [TestNGLaunchShortcut] Examining Java element:[Working copy] LangingPageTest.java [in test [in src [in EstoreTest]]]
+  package test
+  import org.junit.Assert
+  import org.testng.ITestResult
+  import org.testng.annotations.AfterMethod
+  import org.testng.annotations.AfterTest
+  import org.testng.annotations.BeforeTest
+  import org.testng.annotations.Test
+  import com.relevantcodes.extentreports.ExtentReports
+  import com.relevantcodes.extentreports.ExtentTest
+  import com.relevantcodes.extentreports.LogStatus
+  import pageObjects.BasketPage
+  import pageObjects.ProductDescPage
+  import pageObjects.ProductListPage
+  import testdata.GetScreenshot
+  class LangingPageTest
+    void testSetUp()
+    void testLandingPageLoaded()
+    void testSearchOnLandingPage()
+    void testProductPage()
+    void getResult(ITestResult)
+    void testCleanup()
+
+!ENTRY org.testng.eclipse 1 0 2017-04-03 14:26:36.861
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar C:\EstoreAutomation\Workspace\EstoreTest\bin C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar C:\EstoreAutomation\Eclipse\extentreports-2.05.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 57750 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-930103063\testng-customsuite.xml
+java -ea -classpath C:\EstoreAutomation\Eclipse\eclipse\plugins\org.testng.eclipse_6.11.0.201703011520\lib\testng-remote.jar:C:\EstoreAutomation\Workspace\EstoreTest\bin:C:\EstoreAutomation\Webdriver\selenium-java-2.41.0\selenium-2.41.0\selenium-java-2.41.0.jar:C:\EstoreAutomation\Webdriver\selenium-server-2.41.0\selenium-2.41.0\selenium-server-standalone-2.41.0.jar:C:\EstoreAutomation\Eclipse\poi-bin-3.15-20160924\poi-3.15\poi-3.15.jar:C:\EstoreAutomation\Eclipse\extentreports-2.05.jar org.testng.remote.RemoteTestNG -serport 57750 -protocol json -d C:\EstoreAutomation\Workspace\EstoreTest\test-output C:\Users\VARUN~1.AGG\AppData\Local\Temp\testng-eclipse-930103063\testng-customsuite.xml

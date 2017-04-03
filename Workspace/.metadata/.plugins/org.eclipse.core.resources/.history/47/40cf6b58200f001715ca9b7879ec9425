@@ -1,0 +1,15 @@
+package pageObjects;
+
+import org.openqa.selenium.WebDriver;
+
+public class ProductDescPage extends AbstractPage {
+	
+	public ProductDescPage(WebDriver driver){
+		super(driver);
+	}
+	
+	public boolean isAtPage(){
+		return driver.getTitle().contains("Buy ");
+	}
+
+}
